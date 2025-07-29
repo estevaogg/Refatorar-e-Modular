@@ -4,30 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js" defer></script>
+    <script type="module" src="js/app.js" defer></script> <!-- Usando app.js como módulo -->
     <link rel="stylesheet" href="style.css">
     <title>Cadastro</title>
 </head>
 
 <body>
     <main>
-        <form>
+        <form id="formCadastro"> <!-- Adicionado um ID para o formulário -->
             <h1>Cadastro</h1>
             <section class="inputum">
-            <label for="nome">Digite seu nome:</label>
-            <input type="text" id="nome" placeholder="Estêvão">
+                <label for="nome">Digite seu nome:</label>
+                <input type="text" id="nome" placeholder="Estêvão" required>
             </section>
             <section class="inputdois">
-            <label for="email">Digite seu e-mail:</label>
-            <input type="email" id="email" placeholder="a12345678@gmail.com">
+                <label for="email">Digite seu e-mail:</label>
+                <input type="email" id="email" placeholder="a12345678@gmail.com" required>
             </section>
-            <button id="enviar">Enviar</button>
+            <button type="submit" id="enviar">Enviar</button> <!-- Alterado para type="submit" -->
         </form>
         <h3>Lista de Clientes:</h3>
         <ul id="listaClientes">
-            <li>aldo</li>
+            <!-- A lista de clientes será preenchida dinamicamente pelo JavaScript -->
         </ul>
-
     </main>
 </body>
 
