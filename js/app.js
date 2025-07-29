@@ -28,7 +28,7 @@ function adicionarClienteNaLista(cliente) {
 }
 
 async function removerCliente(id) {
-    await clienteService.removerCliente(id);
+    await serviço.removerCliente(id);
 }
 
 formCadastro.addEventListener("submit", async (event) => {
@@ -36,7 +36,7 @@ formCadastro.addEventListener("submit", async (event) => {
     const nome = document.getElementById("nome").value;
     const email = document.getElementById("email").value;
 
-    const novoCliente = await clienteService.adicionarCliente(nome, email);
+    const novoCliente = await serviço.adicionarCliente(nome, email);
     adicionarClienteNaLista(novoCliente);
 
     formCadastro.reset();
